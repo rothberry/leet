@@ -28,10 +28,16 @@ const arr1 = [1, 1, 1, 2, 2, 3]
 const arr2 = [0,0,1,1,1,1,2,3,3]
 // * => return 7
 // * => [0,0,1,1,2,3]
-const arr3 = [0,0,1,1,1,2,2,3,3,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6]
+// const arr3 = [0,0,1,1,1,2,2,3,3,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,6,6,6]
 // * => return 14
 // * => [0,0,1,1,2,2,3,3,4,4,5,5,6,6]
 
-console.log(removeDuplicatesTwo(arr1))
-console.log(removeDuplicatesTwo(arr2))
-console.log(removeDuplicatesTwo(arr3))
+// console.log(removeDuplicatesTwo(arr1))
+// console.log(removeDuplicatesTwo(arr2))
+// console.log(removeDuplicatesTwo(arr3))
+
+const arr = [4,1,2,3,5,1,2]
+const cmp = (a,b) => {return a - b}
+console.log(arr)
+arr.sort(cmp)
+console.log(arr)
