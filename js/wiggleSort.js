@@ -37,9 +37,6 @@ const wiggleSort = nums => {
     } else {
       console.log("odd ", nums[i - 1] < nums[i] > nums[i + 1])
     }
-    // if i is even and is greater than next, then swap spots
-
-    // console.log(cur, next, nums)
   }
   return nums
 }
