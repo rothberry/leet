@@ -1,0 +1,28 @@
+
+[1mFrom:[0m /home/phil/dev/test/leet/ruby/can_transform.rb @ line 31 Object#can_transform:
+
+    [1;34m17[0m: [32mdef[0m [1;34mcan_transform[0m(s, e)
+    [1;34m18[0m: 
+    [1;34m19[0m:   i = j = [1;34m0[0m
+    [1;34m20[0m:   sArr = s.chars
+    [1;34m21[0m:   eArr = e.chars
+    [1;34m22[0m:   [1;34m# output = [][0m
+    [1;34m23[0m:   [32mwhile[0m i < e.length
+    [1;34m24[0m:     start_slice = sArr.slice(i, i + [1;34m2[0m)
+    [1;34m25[0m:     end_slice =   eArr.slice(i, i + [1;34m2[0m)
+    [1;34m26[0m:     [32mif[0m ( end_slice == [[31m[1;31m"[0m[31mX[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mR[1;31m"[0m[31m[0m] )
+    [1;34m27[0m:       [32mif[0m (start_slice == end_slice.reverse)
+    [1;34m28[0m:         swap(start_slice)
+    [1;34m29[0m:         sArr[i] = start_slice[[1;34m0[0m]
+    [1;34m30[0m:         sArr[i+[1;34m1[0m] = start_slice[[1;34m1[0m]
+ => [1;34m31[0m:         binding.pry
+    [1;34m32[0m:         [1;34m# Change the start_slice to match end_slice[0m
+    [1;34m33[0m:       [32mend[0m
+    [1;34m34[0m:     [1;34m# elsif ("LX" || "XL" == end_slice)[0m
+    [1;34m35[0m: 
+    [1;34m36[0m:     [32mend[0m
+    [1;34m37[0m:     i+=[1;34m1[0m
+    [1;34m38[0m:   [32mend[0m
+    [1;34m39[0m: 
+    [1;34m40[0m: [32mend[0m
+
