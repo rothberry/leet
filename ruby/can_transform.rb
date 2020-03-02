@@ -38,6 +38,9 @@ def can_transform(s, e)
     j+=1
   end
   return true
+end
+# p can_transform("RXXLRXRXL", "XRLXXRRLX")
+p can_transform("XXXXXLXXXX", "LXXXXXXXXX")
 
   # while i < s.length - 1
   #   start_slice = sArr.slice(i, 2)
@@ -70,10 +73,9 @@ def can_transform(s, e)
   # p s.chars
   # p sArr
   # sArr == eArr
-end
 
 # def swap_and_replace(arr, tar, cur)
-#   temp = arr[0]
+#   temp = arr[0]git
 #   arr[0] = arr[1]
 #   arr[1] = temp
 #   tar[cur] = arr[0]
@@ -81,5 +83,3 @@ end
 #   tar
 # end
 
-# p can_transform("RXXLRXRXL", "XRLXXRRLX")
-p can_transform("XXXXXLXXXX", "LXXXXXXXXX")
