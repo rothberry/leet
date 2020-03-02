@@ -3,6 +3,7 @@
 # Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? 
 # Find all unique triplets in the array which gives the sum of zero.
 require 'pry'
+require_relative 'print_out.rb'
 
 def three_sum(nums)
   # outliers if 3 zeroes
@@ -19,8 +20,7 @@ def three_sum(nums)
     while (i >= 0 && j < nums.length)
       
       sum = nums[i] + nums[m] + nums[j]
-      print sum, '  ', i, ' ', m, ' ', j
-      puts ''
+      print_out([sum, i, m, j])
       if sum == 0
         output << [nums[i], nums[m], nums[j]]
         i = i - 1

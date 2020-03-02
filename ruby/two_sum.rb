@@ -1,7 +1,9 @@
 # @param {Integer[]} nums
 # @param {Integer} target
 # @return {Integer[]}
+
 require 'pry'
+require_relative 'print_out'
 
 def two_sum(nums, target)
   i = 0
@@ -10,8 +12,6 @@ def two_sum(nums, target)
     while j < nums.length
       sum = nums[i] + nums[j]
       diff = sum - target
-      # print i, '  ', j, '   ', nums[i], '  ', nums[j], '   ', diff
-      # puts ''
       # binding.pry
       if diff == 0
         return [i, j]
@@ -26,7 +26,7 @@ def two_sum2(nums, target)
   hash = {}
   nums.each_with_index do |n, i|
     # p hash[target - n]
-    p hash
+    # p hash
     if hash[target - n]
       return hash[target - n], i
     end
