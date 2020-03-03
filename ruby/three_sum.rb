@@ -17,8 +17,7 @@ def three_sum(nums)
   (1..nums.length - 2).step(1) do |m|
     i = m - 1
     j = m + 1
-    while (i >= 0 && j < nums.length)
-      
+    while (i >= 0 && j < nums.length)  
       sum = nums[i] + nums[m] + nums[j]
       print_out([sum, i, m, j])
       if sum == 0
