@@ -12,7 +12,7 @@
 var sumSubarrayMins = function(A) {
   let sumArr = []
   let i = 1
-  // initial length of B subarrays
+  // initial length of B s  ubarrays
   // first get sum of A
   // or split into length of i + 1
   while (i <= A.length) {
