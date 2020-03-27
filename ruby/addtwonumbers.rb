@@ -7,32 +7,25 @@
 # @return {ListNode}
 require 'pry'
 def add_two_numbers(l1, l2)
-  l1_int = 0
-  l2_int = 0
-  i_1 = 1
-  i_2 = 1
+  l1_int = l2_int = i = 0
+
   # create int out of arrays
-  for x in l1 do
-    y = x * i_1
-    i_1 *= 10
-    l1_int += y
+  while i < l1.length
+    l1_int += 10**i * l1[i]
+    l2_int += 10**i * l2[i]
+    i+=1
   end
 
-  for x in l2 do
-    y = x * i_2
-    i_2 *= 10
-    l2_int += y
-  end
   # add new ints together
   sum = l1_int + l2_int
   res = sum.to_s.split("")
   length_of_res = res.length + 1
   result = []
-  i = 1
-  while i < length_of_res
-    pushed = res[-i].to_i
+  j = 1
+  while j < length_of_res
+    pushed = res[-j].to_i
     result.push(pushed)
-    i += 1
+    j += 1
   end
 
   result
