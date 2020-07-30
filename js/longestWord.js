@@ -1,3 +1,6 @@
+// !DONE
+// TODO refactor
+
 const longestWord = sen => {
   // code goes here
   // * first separate by space

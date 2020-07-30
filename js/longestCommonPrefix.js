@@ -1,3 +1,6 @@
+// !DONE
+// TODO refactor
+
 // const longestCommonPrefix = str => {
 //   // ! Brute Force
 //   //? if the nth letter of each index are equal add to result string

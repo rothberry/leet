@@ -3,6 +3,7 @@
  * @return {string[]}
  * Given n pairs of parentheses,
  * write a function to generate all combinations of well-formed parentheses.
+ * !UNFINISHED
  */
 const generateParenthesis = n => {
   // Start by creating an array with n open and n closed

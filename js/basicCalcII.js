@@ -3,6 +3,7 @@
  * @return {number}
  * Implement a basic calculator to evaluate a simple expression string.
  * The integer division should truncate toward zero.
+ * !UNFINISHED
  */
 
 var calculate = function(s) {

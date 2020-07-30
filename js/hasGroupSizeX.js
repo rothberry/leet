@@ -1,6 +1,7 @@
 /**
  * @param {number[]} deck
  * @return {boolean}
+ * !DONE
  */
 
 const gcd = (a, b) => {
@@ -40,10 +41,10 @@ console.log(hasGroupsSizeX([1, 2, 3, 4, 4, 3, 2, 1]))
 // Output: true
 console.log(hasGroupsSizeX([1, 1, 1, 2, 2, 2, 3, 3]))
 // Output: false
-// console.log(hasGroupsSizeX([1]))
+console.log(hasGroupsSizeX([1]))
 // Output: false
-// console.log(hasGroupsSizeX([1, 1]))
+console.log(hasGroupsSizeX([1, 1]))
 // Output: true
-// console.log(hasGroupsSizeX([1, 1, 2, 2, 2, 2]))
+console.log(hasGroupsSizeX([1, 1, 2, 2, 2, 2]))
 // Output: true
-// console.log(hasGroupsSizeX([0, 0, 0, 1, 1, 1, 2, 2, 2]))
+console.log(hasGroupsSizeX([0, 0, 0, 1, 1, 1, 2, 2, 2]))

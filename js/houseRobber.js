@@ -1,7 +1,8 @@
 /**
  * @param {number[]} nums
  * @return {number}
- */
+ * !UNFINISHED
+*/
 const rob = (nums) => {
   // rob houses to max profit
   // can't rob two houses right next to each other

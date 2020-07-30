@@ -1,6 +1,7 @@
 /**
  * @param {string} str
  * @return {number}
+ * !DONE
  */
 
 const INT_MAX = 2 ** 31 - 1
@@ -53,9 +54,9 @@ const myAtoi = str => {
 myAtoi("") // 0
 myAtoi("  ") // 0
 myAtoi("-5-") // 0
-// myAtoi("  0000000000012345678") // 12345678
-// myAtoi("  +0 123") // 0
-// myAtoi("   -42") // -42
-// myAtoi("words and 987") // 0
-// myAtoi("4193 with words ") // 4193
-// myAtoi("-91283472332") // -2147483648
+myAtoi("  0000000000012345678") // 12345678
+myAtoi("  +0 123") // 0
+myAtoi("   -42") // -42
+myAtoi("words and 987") // 0
+myAtoi("4193 with words ") // 4193
+myAtoi("-91283472332") // -2147483648

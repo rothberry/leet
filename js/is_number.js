@@ -1,5 +1,8 @@
-// # @param {String} s
-// # @return {Boolean}
+/**
+ * @param {String} s
+ * @return {Boolean}
+ * !UNFINISHED
+ */
 
 function is_number(s) {
   let output = false

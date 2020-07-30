@@ -2,6 +2,7 @@
  * @param {number[]} prices
  * @return {number}
  * If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+ * !DONE
  */
 
 var maxProfit = function (prices) {

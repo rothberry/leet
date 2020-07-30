@@ -1,3 +1,5 @@
+// !DONE
+
 function deletion_distance(str1, str2) {
   const len1 = str1.length
   const len2 = str2.length
@@ -20,10 +22,10 @@ function deletion_distance(str1, str2) {
       }
     }
   }
-  console.log(dp)
+  // console.log(dp)
   return str1.length + str2.length - 2 * dp[len1][len2]
 }
 
 console.log(deletion_distance("at", "cat"))
-// console.log(deletion_distance("boat", "got"))
-// console.log(deletion_distance("thought", "sloughs"))
+console.log(deletion_distance("boat", "got"))
+console.log(deletion_distance("thought", "sloughs"))

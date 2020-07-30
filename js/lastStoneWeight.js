@@ -13,6 +13,7 @@
  *
  * At the end, there is at most 1 stone left.
  * Return the weight of this stone (or 0 if there are no stones left.)
+ * !DONE
  */
 const numberSort = arr => {
   return arr.sort((a, b) => {
