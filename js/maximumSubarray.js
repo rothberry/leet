@@ -17,29 +17,37 @@ const maxSubArray = (nums) => {
   // * max(current, prev - current) => new value
   // * loop over length of array
 
-  const outputArr = [nums[0]]
-  let prevSum = nums[0]
-  let maxSum = nums[0]
-
-  for (let i = 1; i < nums.length; i++) {
-    const current = nums[i]
+  let startIdx = 0
+  const outputArr = [nums[startIdx]]
+  let prevSum = nums[startIdx]
+  
+  for (let endIdx = 1; endIdx < nums.length; endIdx++) {
+    const current = nums[endIdx]
     // console.log(current, prevSum, prevSum + current)
     prevSum = Math.max(current, prevSum + current)
     outputArr.push(prevSum)
   }
-  for (let j = 0; j < outputArr.length; j++) {
-    let c = outputArr[j]
-    // console.log(c, maxSum)
-    if (c > maxSum) {
-      maxSum = c
-    }
-  }
-  // console.log(outputArr)
-  // console.log(maxSum)
-  return maxSum
+  // let maxSum = nums[0]
+  // for (let j = 0; j < outputArr.length; j++) {
+  //   let c = outputArr[j]
+  //   // console.log(c, maxSum)
+  //   if (c > maxSum) {
+  //     maxSum = c
+  //   }
+  // }
+  // return maxSum
+  return Math.max(...outputArr)
+}
+
+const maxSubArrayDP = nums => {
+  // Kadane's Algorithm
+  
+  
 }
 
 const a1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-// * Output: 6
+const a2 = [1, -3, 2, 1, -1]
+// * Output: 6z
 // * Explanation: [4,-1,2,1] has the largest sum = 6.
-console.log(maxSubArray(a1))
+console.log(maxSubArrayDP(a1))
+console.log(maxSubArrayDP(a2))
