@@ -72,7 +72,6 @@ const bestSquaresNew = (matrix, size) => {
       let prevArr = matrix[i].slice(j, j + size)
       let prevSum = prevArr.reduce((acc, cur) => acc + cur, 0)
       // console.log(`${i}, ${j}\t${prevArr} => ${prevSum}`)
-      // kadaneMat[i][j] = {
       kadaneMat.push({
         arr: prevArr,
         sum: prevSum,
