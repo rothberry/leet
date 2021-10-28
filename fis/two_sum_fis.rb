@@ -3,6 +3,7 @@
 # @return {Integer[]}
 
 require 'pry'
+require_relative 'print_out'
 
 =begin
 
