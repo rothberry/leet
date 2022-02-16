@@ -65,10 +65,10 @@ def two_sum_second(nums, target)
   end
 end
 
-p two_sum_second([2,7,11,15], 9)
-p two_sum_second([2,7,11,15, 20], 9)
-p two_sum_second([3,2,4], 6)
-p two_sum_second([3,3], 6)
+# p two_sum_second([2,7,11,15], 9)
+# p two_sum_second([2,7,11,15, 20], 9)
+# p two_sum_second([3,2,4], 6)
+# p two_sum_second([3,3], 6)
 
 
 
@@ -92,19 +92,24 @@ def two_sum(nums, target)
   end
 end
 
+# [2,7,11,15], 26
+# 2+7 == 9!, 2+11, 2+15, 7+11, 7+15, 11+15==26
+
 # ? Creating a hash (dynamic programming)
 def two_sum2(nums, target)
   hash = {}
   nums.each_with_index do |n, i|
+    p target - n
     if hash[target - n]
       return [hash[target - n], i]
     end
     hash[n] = i
+    p hash
   end
   return -1
 end
 
-# p two_sum2([2,7,11,15], 26)
-# p two_sum2([3,2,4], 6)
-# p two_sum2([0,0], 1)
+p two_sum2([2,7,11,15], 26)
+p two_sum2([3,2,4], 6)
+p two_sum2([0,0], 1)
 
