@@ -27,15 +27,6 @@ const maxSubArray = (nums) => {
     prevSum = Math.max(current, prevSum + current)
     outputArr.push(prevSum)
   }
-  // let maxSum = nums[0]
-  // for (let j = 0; j < outputArr.length; j++) {
-  //   let c = outputArr[j]
-  //   // console.log(c, maxSum)
-  //   if (c > maxSum) {
-  //     maxSum = c
-  //   }
-  // }
-  // return maxSum
   return Math.max(...outputArr)
 }
 

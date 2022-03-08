@@ -5,30 +5,62 @@
  * !DONE
  */
 
-var maxProfit = function (prices) {
-  let obj = {}
-  prices.forEach((buyPrice, idx, arr) => {
-    for (let j = idx + 1; j < arr.length; j++) {
-      const sellPrice = arr[j]
-      let profit = sellPrice - buyPrice
-      if (profit > 0) {
-        !obj[profit] ? (obj[profit] = [idx, j]) : obj[profit].push([idx, j])
-      }
-    }
-  })
-  if (Object.keys(obj).length > 0) {
-    let maxProf = Math.max(...Object.keys(obj))
-    console.log("Indece:\t", obj[maxProf])
-    return maxProf
-  } else {
-    console.log("no max profit")
-    return 0
-  }
+const maxProfit = (prices) => {
+	// * Brute force O(n^2)
+	// Check the profit for each pair of buy sell dates
+	// add to obj of key=profit, value=[buyIdx, sellIdx]
+	// return the maxProfit
+	let obj = {}
+	prices.forEach((buyPrice, idx, arr) => {
+		for (let j = idx + 1; j < arr.length; j++) {
+			const sellPrice = arr[j]
+			let profit = sellPrice - buyPrice
+			if (profit > 0) {
+				!obj[profit] ? (obj[profit] = [idx, j]) : null
+			}
+		}
+    console.log(obj)
+	})
+	// ineffceint, will refactor if time
+	if (Object.keys(obj).length > 0) {
+		let maxProf = Math.max(...Object.keys(obj))
+		console.log("Indece:\t", obj[maxProf])
+		return maxProf
+	} else {
+		console.log("no max profit")
+		return 0
+	}
 }
 
-console.log(maxProfit([7, 1, 5, 3, 6, 4]))
-console.log(maxProfit([8, 1, 2, 5, 2, 3, 6, 7]))
-console.log(maxProfit([7, 6, 4, 3, 1]))
+const maxProfit2 = (prices) => {
+  // * Solution 2
+  // Start with a max profit of 0 and 2 starting indeces for buying(left=0) and selling (right=1)
+  // loop until the right index reaches the end
+  // for each iteration
+  // check if the left price is less than the right price (this means there's a profit)
+  // set maxProfit to max of maxProfit and currentProfit
+
+  let left = 0; // Buy
+  let right = 1; // sell
+  let maxProf = 0;
+  while (right < prices.length) {
+    if (prices[left] < prices[right]) {
+      let profit = prices[right] - prices[left]; // our current profit
+
+      maxProf = Math.max(maxProf, profit);
+    } else {
+      left = right;
+    }
+    right++;
+    console.log({left, right, maxProf})
+  }
+  return maxProf;
+
+}
+
+console.log(maxProfit2([7, 1, 5, 3, 6, 4]))
+console.log(maxProfit2([8, 1, 2, 5, 2, 3, 6, 7]))
+console.log(maxProfit2([7, 6, 4, 3, 1]))
 
 // Input: [7,1,5,3,6,4]
 // Output: 5

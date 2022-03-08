@@ -38,11 +38,62 @@ const generateParenthesis = n => {
   return output
 }
 
-console.log(generateParenthesis(3))
-// [
-//   "((()))",
-//   "(()())",
-//   "(())()",
-//   "()(())",
-//   "()()()"
-// ]
+const generateParenthesis2 = n => {
+  let output = ["()"] // for n == 1
+  for (let i = 1; i < n; i++) {
+    let currentOutput = []
+    // surround with
+    output.forEach(ele => {
+      currentOutput.push("(" + ele + ")")
+    })
+    // add to end
+    output.forEach(ele => {
+      currentOutput.push(ele + "()")
+    })
+    // add to front
+    output.forEach(ele => {
+      if (!currentOutput.includes("()" + ele)) {
+        currentOutput.push("()" + ele)
+      }
+    })
+    output = currentOutput
+  }
+  return output
+} 
+
+
+console.log(generateParenthesis2(1))
+// "()"
+
+console.log(generateParenthesis2(2))
+// "()[]",
+// "[()]",
+
+console.log(generateParenthesis2(3))
+// "()()[]", => add [] to end
+// "(())[]",
+//// "[]()()", => add [] to front already got it
+// "[](())", => add [] to front
+// "[()()]", => surround all with [ ]
+// "[(())]",
+
+console.log(generateParenthesis2(4))
+// add to end
+// "()()()[]",
+// "(()())[]", 
+// "((()))[]",
+// "(())()[]",
+// "()(())[]",
+// add to front
+//// "[]()()()",
+// "[](()())", 
+// "[]((()))",
+// "[](())()",
+// "[]()(())",
+// surround 
+// "[()()()]",
+// "[(()())]", 
+// "[((()))]",
+// "[(())()]",
+// "[()(())]",
+

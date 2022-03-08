@@ -8,13 +8,13 @@ var containsDuplicate = function (nums) {
   while (i < nums.length) {
     let cur = nums[i]
     if (output[cur]) {
-      return true
+      return output
     } else {
       output[cur] = 1
     }
     i++
   }
-  return false
+  return -1
 }
 
 console.log(containsDuplicate([1, 2, 3, 1]))

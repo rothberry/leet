@@ -37,6 +37,6 @@ const digits = (num) => {
   }
   return digitsArr
 }
-console.log(isHappy(19))
-console.log(isHappy(7))
-// console.log(digits(19))
+// console.log(isHappy(19))
+// console.log(isHappy(7))
+console.log(digits(19))
