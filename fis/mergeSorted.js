@@ -39,12 +39,52 @@ const merge = (nums1, m, nums2, n) => {
 	}
 }
 
+
+
+const merge2 = (nums1, nums2) => {
+	/* 
+		Modified version
+		m = nums1.length
+		n = nums2.length
+
+		// ? New array
+		create output array (of length n+m)
+		i & j or counter of m & n respectfully
+		loop n + m times (or over output array)
+			if nums1[i] <= nums2[j]
+				push nums1[i]
+				increase i
+			if nums1[i] > nums2[j]
+				push nums2[j]
+				increase j
+		
+		return output
+
+		// ? In nums1 destructively
+		nums1 will go from [1,2,3] to [1,2,2,3,5,6]
+
+		i & j or counter of m & n respectfully
+		loop n + m times
+			if nums1[i] <= nums2[j]
+				do nothing
+				increase i
+			if nums1[i] > nums2[j]
+				insert nums2[j] before nums1[i]
+				increase j
+		return nums1
+
+	*/
+}
+
+
 console.clear()
 console.log("TESTING")
 let nums1 = [1, 2, 3, 0, 0, 0],
-	m = 3,
-	nums2 = [2, 5, 6],
-	n = 3,
-	ans = [1, 2, 2, 3, 5, 6]
-merge(nums1, m, nums2, n)
-console.log(nums1)
+m = 3,
+nums2 = [2, 5, 6],
+n = 3,
+ans = [1, 2, 2, 3, 5, 6]
+// merge(nums1, m, nums2, n)
+// console.log(nums1)
+
+console.log("TESTING 2...")

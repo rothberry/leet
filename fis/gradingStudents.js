@@ -7,11 +7,13 @@
  */
 
 const gradingStudents = (grades) => {
-  // Write your code here
-  return grades.map((grade) => {
+  // return mapped array of grades with rounded values
+  // in loop
     // if the diff between grade and nearest multiple of 5 is less than 3
     // round up to nearest 5
     // if grade is less than 38, no rounding
+
+    return grades.map((grade) => {
     // if (grade < 38 || grade % 5 < 3) {
     //   return grade
     // } else {
@@ -28,6 +30,9 @@ const testGrade = grade => {
     return (parseInt(grade / 5) + 1) * 5
   }
 }
+
+// 78 % 5 == 3?
+// 78 / 5 without a remainer => 15 + 1 * 5
 
 // const studentsPassed = grades => {
 
