@@ -19,24 +19,24 @@ var generate1 = function (numRows) {
 
 	let i = 0
 	// let output = [[1], [1,1]]
-  // if (numRows < 3 )  return output[numRows - 1]
+	// if (numRows < 3 )  return output[numRows - 1]
 	// let output = new Array(numRows)
 	let output = new Array()
 	while (i < numRows) {
 		// * create subarray
 		// let curRow = []
-    let curRow = new Array(i)
+		let curRow = new Array(i)
 		let j = 0
 		while (j <= i) {
 			// * check if current digit creation is the first or last
 			if (j === 0 || j === i) {
 				// curRow.push(1)
-        curRow[j] = 1
+				curRow[j] = 1
 			} else {
 				// * find previous row, and push into subarray the sum of the j-1 + j
 				const prevRow = output[i - 1]
 				// curRow.push(prevRow[j - 1] + prevRow[j])
-				curRow[j] = (prevRow[j - 1] + prevRow[j])
+				curRow[j] = prevRow[j - 1] + prevRow[j]
 			}
 			j++
 		}
@@ -63,10 +63,11 @@ const generate2 = (numRows) => {
 	return output //[numRows]
 }
 console.clear()
-let n = 1, m = 5
+let n = 1,
+	m = 5
 while (n <= m) {
-  console.log({ [n]: generate1(n) })
-  n++
+	console.log({ [n]: generate1(n) })
+	n++
 }
 // console.log(generate1(30))
 // Input: 5
