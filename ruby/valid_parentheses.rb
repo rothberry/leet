@@ -3,6 +3,17 @@
 require 'pry'
 
 def is_valid(s)
+  # split string into array 
+  # create a stack (in our case an array that we will only be looking at the last value)
+  # loop over array
+  # if the current value is a opening, then add to stack
+  # if closing
+    # check if top of stack is the matching parentheses
+    # if so, remove the top of the stack
+    # if not, break and return false
+  # if the stack is empty at the end, return true
+
+
   stack = []
   s.split("").each do |x|
     case x
