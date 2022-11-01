@@ -6,23 +6,30 @@
  */
 const numIslands = (grid) => {
 	// BREADTH FIRST SEARCH
-	// let [rows, cols] = [grid.length, grid[0].length]
-	let visited = []
+	let [rows, cols] = [grid.length, grid[0].length]
+	let visited = {}
 	let islands = 0
 
-  // const bfs = (i,j) => {
-  //   queue = 
-  // }
-
-	for (let i = 0; i < grid.length; i++) {
-		const r = grid[i]
-		for (let j = 0; j < r.length; j++) {
-			const current = r[j]
-			if (current === "1") {
-				console.log(i, j)
+	for (let r in grid) {
+		for (let c in grid[r]) {
+			if (grid[r][c] === "1" && !visited[(r, c)]) {
+				console.log(r, c)
+				bfs(r, c, visited)
+				islands += 1
 			}
 		}
 	}
+	return islands
+}
+
+const bfs = (r, c, visited) => {
+	const queue = []
+	visited[`${r},${c}`] = 7
+	queue.push([r, c])
+	console.log({ queue, visited })
+	// while (queue) {
+
+	// }
 }
 
 let grid1 = [
@@ -40,6 +47,9 @@ let grid2 = [
 	["0", "0", "0", "1", "1"],
 ]
 let output2 = 3
+
+console.clear()
+
 
 numIslands(grid1)
 // numIslands(grid2)
