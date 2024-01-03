@@ -35,7 +35,7 @@ class TermHelper():
         try:
             context = inspect.getframeinfo(frame.f_back).code_context
             caller_lines = ''.join([line.strip() for line in context])
-            m = re.search(r'dict_print\s*\((.+?)\)$', caller_lines)
+            m = re.search(r'kv_print\s*\((.+?)\)$', caller_lines)
             if m:
                 key = m.group(1)
                 print(f'{key} => {obj}')
