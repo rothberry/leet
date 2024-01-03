@@ -1,15 +1,25 @@
-from typing import List
+from helpers import TermHelper
+from ipdb import set_trace
 
 
-from typing import List
+def twoSum(nums, target):
+    checked = dict()
+    for i, x in enumerate(nums):
+        try:
+            return [checked[target - x], i]
+        except KeyError:
+            checked[x] = i
+    TermHelper.kv_print(checked)
+    return -1
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        next
 
-# TESTING
+TermHelper.top_wrap("Testing")
 
-nums = list([2,7,11,15])
-breakpoint()
-# print(twoSum(self, [2,7,11,15], 9))
+nums = [2, 7, 11, 15]
 
+print(twoSum(nums, 9))
+TermHelper.kv_print(twoSum(nums, 26))
+print(twoSum(nums, 27))
+
+set_trace()
+TermHelper.center_string_stars("done", "-")
