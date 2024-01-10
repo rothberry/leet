@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 ipdb = "*"
+py-term-helpers = "*"
 
 [dev-packages]
 
