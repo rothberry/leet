@@ -12,14 +12,26 @@ boolean book(int start, int end) Returns true if the event can be added to the c
  
 
  """
+from ipdb import set_trace
+from py_term_helpers import TermHelper
+
 
 class MyCalendar:
 
     def __init__(self):
-        pass
+        # can import SortedList() for dates to keep order
+        self.dates = []
 
     def book(self, start: int, end: int) -> bool:
-        pass
+        for date_range in self.dates:
+            check_range = range(date_range[0], date_range[1]+1)
+            if start in check_range or end in check_range:
+                print("NAH")
+                return False
+        self.dates.append([start, end])
+        print("YAH")
+        return True
+        # set_trace()
 
 
 # Example 1:
@@ -30,12 +42,19 @@ class MyCalendar:
 # Output
 # [null, true, false, true]
 
+TermHelper.top_wrap("TESTING")
 # Explanation
-myCalendar = MyCalendar();
-myCalendar.book(10, 20); // return True
-myCalendar.book(15, 25); // return False, It can not be booked because time 15 is already booked by another event.
-myCalendar.book(20, 30); // return True, The event can be booked, as the first event takes every time less than 20, but not including 20.
-
+cal1 = MyCalendar()
+cal1.book(10, 20)
+cal1.book(15, 25)
+cal1.book(20, 30)
+print(cal1.dates)
+TermHelper.star_line()
+cal2_dates = [[47,50],[33,41],[39,45],[33,42],[25,32],[26,35],[19,25],[3,8],[8,13],[18,27]]
+cal2 = MyCalendar()
+for d in cal2_dates:
+    cal2.book(d[0], d[1])
+    print(cal2.dates)
 
 
 # Your MyCalendar object will be instantiated and called as such:
