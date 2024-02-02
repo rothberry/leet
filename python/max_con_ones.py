@@ -1,7 +1,7 @@
 # Given a binary array nums, return the maximum number of consecutive 1's in the array.
 
 from ipdb import set_trace
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap, kv_print
 
 def findMaxConsecutiveOnes(nums):
     # set_trace()
@@ -30,7 +30,7 @@ nums1 = [1, 1, 0, 1, 1, 1]
 nums2 = [1, 0, 1, 1, 0, 1]
 # Output: 2
 
-TermHelper.top_wrap("TEST")
+top_wrap("TEST")
 print(findMaxConsecutiveOnes(nums1))
 print(findMaxConsecutiveOnes(nums2))
-TermHelper.kv_print(nums1)
+kv_print(nums1)

@@ -6,7 +6,8 @@ You must write an algorithm that runs in O(n) time.
  """
 
 from ipdb import set_trace
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap
+# set_trace()
 
 
 def longestConsecutiveSort(nums) -> int:
@@ -52,7 +53,7 @@ def longestConsecutive(nums):
     return longest
 
 
-TermHelper.top_wrap("TEST")
+top_wrap("TEST")
 
 
 nums1 = [100, 4, 200, 1, 1, 3, 2]

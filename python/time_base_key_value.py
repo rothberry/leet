@@ -10,7 +10,7 @@ String get(String key, int timestamp) Returns a value such that set was called p
  """
 
 from ipdb import set_trace
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap
 
 
 class TimeMap:
@@ -27,7 +27,7 @@ class TimeMap:
         pass
 
 
-TermHelper.top_wrap('TESTING')
+top_wrap('TESTING')
 
 time_map = TimeMap()
 time_map.set("foo", "bar", 1)

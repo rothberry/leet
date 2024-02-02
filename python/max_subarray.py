@@ -3,7 +3,7 @@ Max Subarray
 
  """
 
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap
 from ipdb import set_trace
 
 
@@ -41,5 +41,5 @@ a2 = [1, -3, 2, 1, -1]
 # 	Math.floor(Math.random() * (max - min) + min)
 # )
 
-TermHelper.top_wrap('TESTING')
+top_wrap('TESTING')
 max_subarray(a1)

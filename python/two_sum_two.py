@@ -11,7 +11,7 @@ Your solution must use only constant extra space.
 
  
 from ipdb import set_trace
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap
 
 
 
@@ -30,7 +30,7 @@ def two_sum_two(nums, target):
 
 
 
-TermHelper.top_wrap("TWO_SUM_TWO")
+top_wrap("TWO_SUM_TWO")
 nums1 = [2,7,11,15]
 nums2 = [2,3,4]
 nums3 = [-1,0]

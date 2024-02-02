@@ -9,7 +9,7 @@ In other words, return true if one of s1's permutations is the substring of s2.
  """
 
 from ipdb import set_trace
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap, kv_print
 
 
 def checkInclusion(s1: str, s2: str) -> bool:
@@ -21,8 +21,8 @@ def checkInclusion(s1: str, s2: str) -> bool:
     # sliding window of subsstring len(smaller)
     # set_trace()
     short = "".join(sorted(short))
-    # TermHelper.kv_print(short)
-    # TermHelper.kv_print(long)
+    # kv_print(short)
+    # kv_print(long)
     for i, x in enumerate(long):
         sub_str = "".join(sorted(long[i:i+window]))
         if sub_str == short:
@@ -41,7 +41,7 @@ def checkInclusionleet(s1: str, s2: str) -> bool:
     return False
 
 
-TermHelper.top_wrap('TESTING')
+top_wrap('TESTING')
 
 s1 = "ab"
 s2 = "eidbaooo"

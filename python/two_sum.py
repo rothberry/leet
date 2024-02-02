@@ -1,4 +1,4 @@
-from helpers import TermHelper
+from py_term_helpers import top_wrap, kv_print, center_string_stars
 from ipdb import set_trace
 
 
@@ -9,17 +9,17 @@ def twoSum(nums, target):
             return [checked[target - x], i]
         except KeyError:
             checked[x] = i
-    TermHelper.kv_print(checked)
+    kv_print(checked)
     return -1
 
 
-TermHelper.top_wrap("Testing")
+top_wrap("Testing")
 
 nums = [2, 7, 11, 15]
 
 print(twoSum(nums, 9))
-TermHelper.kv_print(twoSum(nums, 26))
+kv_print(twoSum(nums, 26))
 print(twoSum(nums, 27))
 
 set_trace()
-TermHelper.center_string_stars("done", "-")
+center_string_stars("done", "-")

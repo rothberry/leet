@@ -7,7 +7,7 @@ If there is no future day for which this is possible, keep answer[i] == 0 instea
  """
 
 from ipdb import set_trace
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap, kv_print
 
 
 def dailyTemperaturesBF(temperatures):
@@ -47,12 +47,12 @@ def dailyTemperatures(temperatures):
             output[idx] = i - idx
             # print(f'idx:{idx}/output:{output}')
         stack.append(i)
-        TermHelper.kv_print(stack)
-    TermHelper.kv_print((output, ctr))
+        kv_print(stack)
+    kv_print((output, ctr))
     return output
 
 
-TermHelper.top_wrap("TESTING")
+top_wrap("TESTING")
 
 t1 = [73, 74, 75, 71, 69, 72, 76, 73]
 t2 = [30, 40, 50, 60]

@@ -4,7 +4,7 @@ Given an array of integers arr, find the sum of min(b), where b ranges over ever
 """
 
 
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap
 from ipdb import set_trace
 
 
@@ -28,7 +28,7 @@ def sum_min_subarray(nums):
 
 
 
-TermHelper.top_wrap("TESTING")
+top_wrap("TESTING")
 
 arr = [3, 1, 2, 4]
 sum_min_subarray(arr)
