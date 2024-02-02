@@ -5,7 +5,7 @@ Notice that the solution set must not contain duplicate triplets.
 
  """
 
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap, kv_print
 from ipdb import set_trace
 
 
@@ -25,11 +25,11 @@ def threeSum(nums):
                         # set_trace()
                         output.append([x, y, z])
     print(cnt)
-    TermHelper.kv_print(output)
+    kv_print(output)
     return output
 
 
-TermHelper.top_wrap("TESTING")
+top_wrap("TESTING")
 nums1 = [-1, 0, 1, 2, -1, -4]
 nums2 = [0, 1, 1]
 nums3 = [0, 0, 0]

@@ -13,7 +13,7 @@ boolean book(int start, int end) Returns true if the event can be added to the c
 
  """
 from ipdb import set_trace
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap, star_line
 
 
 class MyCalendar:
@@ -42,14 +42,14 @@ class MyCalendar:
 # Output
 # [null, true, false, true]
 
-TermHelper.top_wrap("TESTING")
+top_wrap("TESTING")
 # Explanation
 cal1 = MyCalendar()
 cal1.book(10, 20)
 cal1.book(15, 25)
 cal1.book(20, 30)
 print(cal1.dates)
-TermHelper.star_line()
+star_line()
 cal2_dates = [[47,50],[33,41],[39,45],[33,42],[25,32],[26,35],[19,25],[3,8],[8,13],[18,27]]
 cal2 = MyCalendar()
 for d in cal2_dates:

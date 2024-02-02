@@ -13,10 +13,9 @@ You must implement a solution with O(1) time complexity for each function.
 
  """
 from ipdb import set_trace
-from py_term_helpers import TermHelper
-# import py_term_helpers.TermHelper.top_wrap
+from py_term_helpers import top_wrap, kv_print
 
-TermHelper.top_wrap('TESTING')
+top_wrap('TESTING')
 
 
 class MinStack:
@@ -46,7 +45,6 @@ ops = [[], [-2], [0], [-3], [], [], [], []]
 
 # [null,null,null,null,-3,null,0,-2]
 
-kv_print = TermHelper.kv_print
 # Explanation
 minStack = MinStack()
 minStack.push(-2)

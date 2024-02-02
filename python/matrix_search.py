@@ -9,7 +9,7 @@ You must write a solution in O(log(m * n)) time complexity.
 
  """
 
-from py_term_helpers import TermHelper
+from py_term_helpers import top_wrap, kv_print
 from ipdb import set_trace
 
 
@@ -58,12 +58,12 @@ def matrix_search(mat, target):
     print("Slow False")
     return False
 
-TermHelper.top_wrap('TESTING')
+top_wrap('TESTING')
 
 matrix = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]
 # target = 3
 # Output: true
 
-TermHelper.kv_print(matrix_search(matrix, 16))
+kv_print(matrix_search(matrix, 16))
 matrix_search(matrix, 17)
 matrix_search(matrix, 61)
