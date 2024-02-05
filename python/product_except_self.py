@@ -10,7 +10,7 @@ from ipdb import set_trace
 from py_term_helpers import top_wrap
 
 
-def product_except_self(nums):
+def product_except_self_div(nums):
     # base case (no zeroes)
     # get product of all
     # iterate through
@@ -42,6 +42,26 @@ def product_except_self(nums):
     else:
         for i, x in enumerate(nums):
             output[i] = total_product // x
+    return output
+
+
+def product_except_self(nums):
+    # without dividing..
+    # create output  of [1's]
+    # need to loop getting the prefix product
+    # then loop again getting the post-fix product
+
+    output = [1] * len(nums)
+
+    prefix = 1
+    for i in range(len(nums)):
+        output[i] = prefix
+        prefix *= nums[i]
+
+    postfix = 1
+    for j in range(len(nums) - 1, -1, -1):
+        output[j] *= postfix
+        postfix *= nums[j]
     return output
 
 
