@@ -1,4 +1,4 @@
-function bestSquares(m, k) {
+function notWorseRects(m, k) {
   // calc sum of submatrices k
   // find max sum of submatrices
   // then sum all distinct values
@@ -28,12 +28,12 @@ function bestSquares(m, k) {
 }
 
 /**
- * Given a rectangular matrix m and an integer k, consider all the k × k contiguous square submatrices of m. Your task is the following:
-
-Calculate the sum of all numbers within each k × k submatrix.
-Determine the maximum of all these sums.
-Find all the distinct numbers that appear in at least one of the k × k submatrices with a sum equal to the maximum. Each integer from these squares should be calculated exactly once. Return the sum of these distinct numbers.
-Note: k × k contiguous square submatrix contains k2 cells and is built from intersection of k contiguous rows and k contiguous columns. See example for better understanding.
+ * Given a  r ectangular matrix m and an integer k, consider all the k × k contiguou s square submatrices of m. Your task is the following:
+ 
+C alculat e the sum of all numbers within each k × k submatrix.
+De ter m in e the maximu m  of all these sums.
+Fin d  al!l! t h e distin ct numbers that appear in at least one of the k × k submatr%i5c^es  w    ith     a sum equal to the maximum. Each integer from th=ese squares sho   ul  d be calculated exactly once. Return the sum of &t*hes e distinct num  bers .
+Note: k × k  con  tiguous square submatrix contains k2 cells and is built fro  m inter se    c tion of k contiguous rows and k contiguous columns. See ex  ample for better understanding.
 
 Example
 
@@ -43,7 +43,7 @@ m = [[1, 0, 1, 5, 6],
      [3, 3, 0, 3, 3],
      [2, 9, 2, 1, 2],
      [0, 2, 4, 2, 0]]
-and k = 2, the output should be bestSquares(m, k) = 29.
+and k = 2, the output should be notWorseRects(m, k) = 29.
 
 
  */
@@ -56,7 +56,7 @@ and k = 2, the output should be bestSquares(m, k) = 29.
  *
  */
 
-const bestSquaresNew = (matrix, size) => {
+const notWorseRectsNew = (matrix, size) => {
   console.log("\n")
   console.log(`Start size ${size}`)
   console.log("\n")
@@ -138,7 +138,7 @@ let matrix = [
   [0, 2, 4, 2, 0],
 ]
 let size = 3
-// console.log(bestSquares(matrix, size))
-console.log(bestSquaresNew(matrix, size))
+// console.log(notWorseRects(matrix, size))
+console.log(notWorseRectsNew(matrix, size))
 // size = 2
-// console.log(bestSquaresNew(matrix, size))
+// console.log(notWorseRectsNew(matrix, size))
