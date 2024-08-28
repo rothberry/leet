@@ -51,8 +51,30 @@ Latitude 42 Brewing Company Portage, Michigan Server June 2013 - September 2015 
 *Microsoft Office, AutoCAD Mechanical, Inventor, Oracle Crystal Ball Forecasting, Ableton Live, Six Sigma Lean Manufacturing (Green Belt Certified)*
 
 
-## TECHNICAL PROJECTS 
+---
 
+**Full Stack Software Engineer** with a passion for finding innovative solutions. I have been praised for my strong skills in product design, project management, and creativity that help teams meet deadlines and exceed expectations. I am a creative and driven leader who thrives in challenging environments. I also am a self taught music producer for over 12 years and have come to see sound design through a visual design lens which has supported my coding skills.
+
+---
+## EDUCATION 
+---
+### Flatiron School Chicago, IL 
+- Full Stack Web Development Program, 2019 
+### Western Michigan University Kalamazoo, MI 
+- Bachelor of Science in Entrepreneurial and Industrial Engineering, Minors in Mathematics and Manufacturing, 2016 
+- Vice President of Phi Mu Alpha Sinfonia
+
+---
+## SOFTWARE ENGINEERING SKILLS 
+---
+*Programming Languages:* **JavaScript, Ruby, HTML, CSS, SQL, Java** 
+
+*Technologies:*  **Rails, React, Redux, PostgreSQL, ExpressJS, NodeJS, Webpack, Git, Linux**
+
+*Ideaologies:* Microsoft Office, AutoCAD Mechanical, Inventor, Oracle Crystal Ball Forecasting, Ableton Live, Six Sigma Lean Manufacturing (Green Belt Certified)
+
+---
+## TECHNICAL PROJECTS 
 ### AudioPhiles - [Frontend](https://github.com/rothberry/mod-5-audiofiles-frontend) | [Backend](https://github.com/rothberry/mod-5-audiofiles-backend)
 *A peer to peer audio sample sharing app with a visual representation of the uploaded audio samples.*
 - Crafted the user interface with React and Redux with Semantic UI for styling. 
