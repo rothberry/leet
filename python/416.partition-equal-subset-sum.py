@@ -12,7 +12,7 @@ from ipdb import set_trace
 from py_term_helpers import top_wrap, center_string_stars
 
 
-def canPartition(nums):
+def canPartition1(nums):
     center_string_stars(str(nums))
 
     # first
@@ -54,13 +54,42 @@ def canPartition(nums):
     return True
 
 
+def canPartition(nums):
+
+    # still get target and break if odd
+    target = sum(nums) / 2
+    if int(target) != target:
+        print("OOD")
+        return False
+
+    center_string_stars(str(nums) + str(target))
+    sum_set = set()
+    sum_set.add(0)
+    sum_set.add(nums[0])
+
+    for x in nums[1:]:
+        sum_set_list = list(sum_set)
+        for target_sum in sum_set_list:
+            print(target_sum)
+            cur_sum = target_sum + x
+            sum_set.add(cur_sum)
+            print(cur_sum, sum_set)
+            if cur_sum == target:
+                print("TRUU")
+                return True
+            # set_trace()
+
+    print("nah")
+    return False
+
+
 top_wrap('TESTING')
-# nums1 = [1, 5, 11, 5]
-# canPartition(nums1)
-# nums2 = [1, 2, 3, 5]
-# canPartition(nums2)
-# nums3 = [2, 2, 2, 2, 2]
-# canPartition(nums3)
+nums1 = [1, 5, 11, 5]
+canPartition(nums1)
+nums2 = [1, 2, 3, 5]
+canPartition(nums2)
+nums3 = [2, 2, 2, 2, 2]
+canPartition(nums3)
 nums4 = [3, 3, 3, 4, 5]
 canPartition(nums4)
 
