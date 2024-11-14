@@ -13,8 +13,8 @@ from py_term_helpers import top_wrap, center_string_stars
 
 
 def findCheapestPrice(n, flights, src, dst, k):
-    center_string_stars(str(flights))
-    center_string_stars(str((src, dst, k)))
+    center_string_stars(flights)
+    center_string_stars((src, dst, k))
 
     # set_trace()
     # first
