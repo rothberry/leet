@@ -7,5 +7,6 @@ func main() {
 	// mapland()
 	// nameStruct()
 	// shapes()
-	fileOps()
+	// fileOps()
+	statusChecker()
 }
