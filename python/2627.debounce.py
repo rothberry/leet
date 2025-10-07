@@ -13,7 +13,7 @@ If instead t = 35ms, The 1st call would be cancelled, the 2nd would be executed 
 
 
 from ipdb import set_trace
-from py_term_helpers import top_wrap, center_string_stars
+from py_term_helpers import *
 import time
 
 def debounce(fn, t):
