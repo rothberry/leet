@@ -1,4 +1,3 @@
-// WesBos
 // Code for changing the color of the github squares
 
 let currentColor = "#ebedfe"
