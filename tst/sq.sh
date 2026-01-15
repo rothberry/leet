@@ -8,7 +8,7 @@ gcp(){
     echo $uuid >> tst/test.txt
     git add .
     git commit -m "$uuid"
-    git push origin gsgb
+    git push origin master
     # git checkout master
 }
 
